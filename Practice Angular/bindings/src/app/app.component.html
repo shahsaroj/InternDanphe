@@ -1,0 +1,48 @@
+<!-- <label>Type Person Name: </label><input type="text" name="Word" [(ngModel)]="PersonName"/>
+<br>
+<label>You Entered : {{PersonName}}</label>
+<br>
+<input type="button" value="ClickHere" name="Word" (click)="OnButtonClick()"/> -->
+
+<hr>
+
+<label>First Name: </label><input type="text" [(ngModel)]="firstName"/>
+<br>
+<label>Middle Name: </label><input type="text" [(ngModel)]="MiddleName"/>
+<br>
+<label>Last Name: </label><input type="text"[ngModel] ="LastName"/>
+<br>
+<label>You Entered : {{firstName}}&nbsp;{{MiddleName}}&nbsp;{{LastName}}</label>
+<br>
+<input type="button" value="Click here to show result" name=" Word" (click)="ShowFullName()"/>
+
+<hr>
+
+<label>Enter the first number: </label><input type="number" [(ngModel)]="firstNum"/>
+<br>
+<br>
+<label>Enter the second number: </label><input type="number" [(ngModel)]="secondNum"/>
+
+
+<br>
+<br>
+<input type="button" value="ADD" name=" Word" (click)="ADD()"/>
+<input type="button" value="SUBTRACT" name=" Word" (click)="SUBTRACT()"/>
+<input type="button" value="MULTIPLY" name=" Word" (click)="MULTIPLY()"/>
+<input type="button" value="DIVIDE" name=" Word" (click)="DIVIDE()"/>
+
+<hr>
+<label>Enter the first number: </label><input type="number" [(ngModel)]="firstNumb"/>
+<br>
+<br>
+<label>Enter the second number: </label><input type="number" [(ngModel)]="secondNumb"/>
+<br>
+<br>
+<input type="button" value="Graeter Num" (click)="greaternum()"/>
+<input type="button" value="Smaller Num" (click)="smallernum()"/>
+
+<hr>
+
+<label>Enter the number: </label><input type="number" [(ngModel)]="firstNumber"/>
+<br>
+<input type="button" value="Even / Odd" (click)="one()"/>
