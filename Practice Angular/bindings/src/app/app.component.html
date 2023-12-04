@@ -2,22 +2,22 @@
 <br>
 <label>You Entered : {{PersonName}}</label>
 <br>
-<input type="button" value="ClickHere" name="Word" (click)="OnButtonClick()"/> -->
+<input type="button" value="ClickHere" name="Word" (click)="OnButtonClick()"/>  -->
 
 <hr>
-
+<h3>showing full name</h3>
 <label>First Name: </label><input type="text" [(ngModel)]="firstName"/>
 <br>
 <label>Middle Name: </label><input type="text" [(ngModel)]="MiddleName"/>
 <br>
-<label>Last Name: </label><input type="text"[ngModel] ="LastName"/>
+<label>Last Name: </label><input type="text"[(ngModel)] ="LastName"/>
 <br>
 <label>You Entered : {{firstName}}&nbsp;{{MiddleName}}&nbsp;{{LastName}}</label>
 <br>
 <input type="button" value="Click here to show result" name=" Word" (click)="ShowFullName()"/>
 
 <hr>
-
+<h3>simple calculator</h3>
 <label>Enter the first number: </label><input type="number" [(ngModel)]="firstNum"/>
 <br>
 <br>
@@ -30,8 +30,10 @@
 <input type="button" value="SUBTRACT" name=" Word" (click)="SUBTRACT()"/>
 <input type="button" value="MULTIPLY" name=" Word" (click)="MULTIPLY()"/>
 <input type="button" value="DIVIDE" name=" Word" (click)="DIVIDE()"/>
+<label>You Entered : {{firstNum}}  &  {{secondNum}}</label>
 
 <hr>
+<h3>Greater number displayer</h3>
 <label>Enter the first number: </label><input type="number" [(ngModel)]="firstNumb"/>
 <br>
 <br>
@@ -42,7 +44,33 @@
 <input type="button" value="Smaller Num" (click)="smallernum()"/>
 
 <hr>
-
+<h3>Check the number is even or Odd</h3>
 <label>Enter the number: </label><input type="number" [(ngModel)]="firstNumber"/>
 <br>
 <input type="button" value="Even / Odd" (click)="one()"/>
+
+<hr>
+<h1>Good Morning</h1>
+<h2>Comparison between two numbers</h2>
+<h3>Addition of two numbers</h3>
+
+<!-- <span class="setup">Given number </span>
+<h1 class="punchline"> {{ data }}</h1> -->
+
+
+<app-parent></app-parent>
+
+<div>  
+    <h3>This is a Attribute Directives</h3>  
+    <span [class.red]="true">Attribute Change</span><br />  
+    <span [ngClass]="{'blue':true}">Attribute Change by Using NgClass</span><br />  
+    <span [ngStyle]="{'font-size':'14px','color':'green'}">Attribute Change by Using NgStyle</span>  
+    <br /><br />  
+    <span [class.cyan]="showColor">Attribute Change</span><br />  
+    <span [ngClass]="{'brown':showColor}">Attribute Change by Using NgClass</span><br />  
+    <input type="button" value="Change Color" (click)="changeColor()" />  
+    <br /><br />  
+    <span [class.cyan]="showColor">Attribute Change</span><br />  
+    <span [ngClass]="{'cyan':showColor, 'red' : !showColor}">Attribute Change by Using NgClass</span><br />  
+    <br />  
+</div>  

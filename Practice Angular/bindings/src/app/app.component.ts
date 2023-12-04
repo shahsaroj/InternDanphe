@@ -7,15 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bindings';
-  // public PersonName : string = "";
-  public firstName : string = "";
+  public PersonName : string = "";
+  public firstName : string = "ABC";
   public MiddleName : string = "";
   public LastName : string = "";
   public firstNum : number = 0;
   public secondNum : number = 0;
   public firstNumb : number = 0;
   public firstNumber : number = 0;
+  public fNumber : number = 0;
+  public SNumber : number = 0;
   public secondNumb : number = 0;
+
+//   ngOnChanges() {    
+//     console.log(`ngOnChanges - data is ${this.firstName}`);    
+// }
  
   
 
@@ -51,6 +57,31 @@ export class AppComponent {
     const one = (this.firstNumber % 2  == 0) ? "even" : "odd";
     alert(one);
   }
+
+
+  showColor: boolean = false;  
   
-}
+  constructor() { }  
+  
+  public changeColor(): void {  
+      this.showColor = (this.showColor);  
+  }  
+
+    ngOnInit(){
+    console.log("ngOnInit is triggered.");
+    this.GetDataFromDatabase();
+  }
+
+  // ngOnChanges(){
+  //   console.log("ngOnChnages is triggered.")
+  // }
+public DataFromDatabase = [];
+  GetDataFromDatabase(){
+//api call
+
+//this.DataFromDatabase = result;
+  }
+           
+ }
+
 

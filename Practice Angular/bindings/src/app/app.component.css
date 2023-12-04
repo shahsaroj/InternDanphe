@@ -1,0 +1,20 @@
+h1{
+    color:red;
+    font-weight:bold;
+    font-size: 40px;
+
+}
+h2{
+    color:blueviolet;
+    font-size: 30px;
+    font-weight: bold;
+}
+h3{
+    color:blue
+ 
+}
+
+.red {color:red;}  
+.blue {color:blue}  
+.cyan {color : cyan}  
+.brown {color : brown}  
