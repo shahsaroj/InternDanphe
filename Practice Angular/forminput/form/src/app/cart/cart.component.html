@@ -1,0 +1,13 @@
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let item of items; let i = index">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}
+    <button type="button" (click)="RemoveItem(i)"><i class="fa fa-remove"></i></button></span>
+
+</div>
+
+<button type="button" (click)="btn5onclick()">Go Back to product</button>||
+<button type="button" (click)="ClearCart()">Clear all items</button>
+
+
