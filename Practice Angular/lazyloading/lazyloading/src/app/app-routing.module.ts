@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 
-const routes: Routes = [{ path: 'a', loadChildren: () => import('./modulea/modulea.module').then(m => m.ModuleaModule) }, { path: 'b', loadChildren: () => import('./moduleb/moduleb.module').then(m => m.ModulebModule) }];
+const routes: Routes = [
+  { path:'', component: AppComponent},
+
+  { path: 'orders',
+ loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule) }, 
+ 
+ { path: 'customers', 
+ loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) }]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
