@@ -1,0 +1,37 @@
+
+<div class="container">
+    <h1>My Form</h1>
+
+
+<form #userlogin = "ngForm" (ngSubmit)="submit(userlogin)" >
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" class="form-control" id="name" required maxlength="18" minlength="5" ngModel name="name"
+          #name="ngModel" />
+          <label for="email">Enter your e-mail id : </label>
+<input type="email" class="form-control" id="email" name="email" required ngModel />
+<br>
+    
+ 
+    
+  
+           <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+          <div *ngIf="name.hasError('required')">Name is required</div>
+              <div *ngIf="name.hasError('minlength')">
+                  Name must be at least 5 characters long </div>
+   
+              <div *ngIf="name.hasError('maxlength')">
+                  Name cannot be more than 18 characters long
+       </div>
+  
+
+
+<button type="submit" class="btn btn-success">Submit</button>
+</div>
+</div>
+
+</form>
+
+</div>
+
+  

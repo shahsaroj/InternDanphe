@@ -1,12 +1,19 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from '../products';
+
 @Component({
   selector: 'app-product-alerts',
   templateUrl: './product-alerts.component.html',
   styleUrls: ['./product-alerts.component.css']
 })
-export class ProductAlertsComponent {
+export class ProductAlertsComponent implements OnInit {
 
-  @Input() product: Product | undefined;
+
+@Input() product: Product | undefined;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
-import { Component, Input } from '@angular/core';
-import { Product } from '../products';
