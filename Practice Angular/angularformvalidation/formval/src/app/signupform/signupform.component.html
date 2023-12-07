@@ -1,0 +1,29 @@
+<form [formGroup]="signupform" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" formControlName="username">
+      <div *ngIf="signupform.get('username').invalid && signupform.get('username').touched">
+        <div *ngIf="signupform.get('username').hasError('required')">Username is required.</div>
+        <div *ngIf="signupform.get('username').hasError('minlength')">Username must be at least 4 characters.</div>
+      </div>
+    </div>
+  
+    <!-- Similarly, add validation for email, password, confirmPassword -->
+  
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password">
+      <!-- Validation messages for password -->
+    </div>
+  
+    <div>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword">
+      <div *ngIf="signupform.hasError('mismatch') && signupform.get('confirmPassword').touched">
+        Passwords do not match.
+      </div>
+    </div>
+  
+    <button type="submit">Sign Up</button>
+  </form>
+  
