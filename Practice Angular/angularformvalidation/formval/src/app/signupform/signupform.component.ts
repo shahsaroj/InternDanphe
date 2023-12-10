@@ -18,21 +18,21 @@ export class SignupComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required]
     }, {
-      validator: this.passwordMatchValidator() // Custom validator for password matching
+      // validator: this.passwordMatchValidator() // Custom validator for password matching
     });
   }
 
   // Custom validator function for password matching
-  passwordMatchValidator() {
-    const password = this.signupform?.get('password')?.value;
-    const confirmPassword = this.signupform?.get('confirmPassword')?.value;
+  // passwordMatchValidator() {
+  //   const password = this.signupform?.get('password')?.value;
+  //   const confirmPassword = this.signupform?.get('confirmPassword')?.value;
 
-    if (password !== confirmPassword) {
-      this.signupform?.get('confirmPassword')?.setErrors({ mismatch: true });
-    } else {
-      this.signupform?.get('confirmPassword')?.setErrors(null);
-    }
-  }
+  //   if (password !== confirmPassword) {
+  //     this.signupform?.get('confirmPassword')?.setErrors({ mismatch: true });
+  //   } else {
+  //     this.signupform?.get('confirmPassword')?.setErrors(null);
+  //   }
+  // }
 
   onSubmit() {
     if (this.signupform.valid) {

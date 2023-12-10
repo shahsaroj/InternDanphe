@@ -28,7 +28,7 @@ export class AppComponent {
         Validators.maxLength(9),
         Validators.pattern('^[a-zA-Z@.com]+$'),
       ]),
-      email: new FormControl('', [Validators.email, Validators.required]),
+      email: new FormControl('', [Validators.email, Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")],),
       gender: new FormControl('', [Validators.required]),
       isMarried: new FormControl('', [Validators.required]),
       country: new FormControl('', [Validators.required]),

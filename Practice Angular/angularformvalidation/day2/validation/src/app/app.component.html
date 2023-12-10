@@ -35,7 +35,7 @@
  
   <p>
     <label for="email">Email: </label>
-    <input type="text" id="email" name="email" formControlName="email">
+    <input type="email" id="email" name="email" formControlName="email">
   </p>
   <div *ngIf="!email?.valid && (email?.dirty ||email?.touched)">
     <div [hidden]="!email?.errors">
