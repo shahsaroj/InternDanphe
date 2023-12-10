@@ -1,0 +1,15 @@
+/* home.component.css */
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+  }
+  

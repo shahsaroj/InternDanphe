@@ -1,0 +1,14 @@
+<!-- product-details.component.html -->
+
+<h2>Product Details</h2>
+<div *ngIf="selectedProduct">
+  <h3>{{ selectedProduct }}</h3>
+  <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+  
+  <!-- Add to Cart button -->
+  <button (click)="addToCart(selectedProduct)">Add to Cart</button>
+</div>
+<div *ngIf="!selectedProduct">
+  <p>Select a product to view details.</p>
+</div>
