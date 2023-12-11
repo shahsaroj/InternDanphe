@@ -30,4 +30,14 @@ export class FruitListComponent implements OnInit {
       this.fruits = this.dataService.getFruits(); // Update the list after adding
     }
   }
+  // onDelete({ index }: { index: number; }) {
+  //     this.dataService.deleteData(index,1);
+   
+  // }
+
+
+  deleteItem(index: number): void {
+    this.fruits.splice(index, 1);
+  }
+  
 }

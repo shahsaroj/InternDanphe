@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FruitListComponent } from './fruit-list/fruit-list.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularserviceexample';
+onDelete:((FruitListComponent: 0, index: 1) => undefined) | undefined;
+dataArray: any;
 }
