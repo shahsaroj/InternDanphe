@@ -58,7 +58,7 @@ export class AppComponent {
     alert(one);
   }
 
-
+    
   showColor: boolean = false;  
   
   constructor() { }  

@@ -1,0 +1,47 @@
+.form {
+    /* font-family: Arial, sans-serif;
+    margin-bottom: 20px; */
+    font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Adjust to fit your layout */
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  /* Move the form to the left */
+  margin-left: 20px; /* Adjust this value based on your layout */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Additional styles as needed */
+  

@@ -1,0 +1,77 @@
+<h1>Discharge Form </h1>
+<form [formGroup]="dischargeForm" (ngSubmit)="submitForm()">
+    <div>
+      <h2>Patient Details</h2>
+      <label for="patientName">Patient Name:</label>
+      <input type="text" id="patientName" formControlName="patientName">
+      <div *ngIf="isFieldInvalid('patientName') && isFieldTouched('patientName')">
+        <small *ngIf="isFieldInvalid('patientName') && dischargeForm.get('patientName')?.errors">
+          Patient Name is required.
+        </small>
+</div>
+        <label for="patientAddress">Patient Address:</label>
+      <input type="text" id="patientAddress" formControlName="patientAddress">
+      <div *ngIf="isFieldInvalid('patientAddress') && isFieldTouched('patientAddress')">
+        <small *ngIf="isFieldInvalid('patientAddress') && dischargeForm.get('patientAddress')?.errors">
+          Patient Address is required.
+        </small>
+      </div>
+  
+      <label for="patientContact">Patient Contact:</label>
+      <input type="text" id="patientContact" formControlName="patientContact">
+      <div *ngIf="isFieldInvalid('patientContact') && isFieldTouched('patientContact')">
+        <small *ngIf="isFieldInvalid('patientContact') && dischargeForm.get('patientContact')?.errors">
+          Patient contact number is required.
+        </small>
+      </div>
+
+  </div>
+
+  <label for="patientDiagonise"><h2>Daignosis:</h2></label>
+  <input type="text" id="patientDiagonise" formControlName="patientDiagonise">
+  <div *ngIf="isFieldInvalid('patientDiagonise') && isFieldTouched('patientDiagonise')">
+    <small *ngIf="isFieldInvalid('patientDiagonise') && dischargeForm.get('patientDiagonise')?.errors">
+      summary is required.
+    </small>
+  </div>
+
+    <h2>Instructions</h2>
+  <label for="patientmedication">Provided Medication: </label>
+  <input type="text" id="patientmedication" formControlName="patientmedication">
+  <div *ngIf="isFieldInvalid('patientmedication') && isFieldTouched('patientmedication')">
+    <small *ngIf="isFieldInvalid('patientmedication') && dischargeForm.get('patientmedication')?.errors">
+      Details is required.
+    </small>
+  </div>
+
+  <label for="patientdietary">Dietary instructions:</label>
+  <input type="text" id="patientdietary" formControlName="patientdietary">
+  <div *ngIf="isFieldInvalid('patientdietary') && isFieldTouched('patientdietary')">
+    <small *ngIf="isFieldInvalid('patientdietary') && dischargeForm.get('patientdietary')?.errors">
+      Details is required.
+    </small>
+  </div>
+
+  <!-- <form [formGroup]="dischargeForm" (ngSubmit)="submitForm()"> -->
+    <!-- Your form controls here -->
+  
+    <!-- Add routerLink to the button -->
+    <button type="submit" [disabled]="!dischargeForm.valid">Generate Discharge Letter</button>
+  <!-- </form> -->
+  
+  <!-- Display discharge letter conditionally -->
+  
+</form>
+<div *ngIf="showDischargeLetter">
+  <h2>Discharge Letter</h2>
+  <!-- Your discharge letter content -->
+  <div class="discharge-content">
+    <p><strong>Patient Name:</strong> {{ formData?.patientName }}</p>
+    <p><strong>Patient Address:</strong> {{ formData?.patientAddress }}</p>
+    <p><strong>Patient Contact:</strong> {{ formData?.patientContact }}</p>
+    <p><strong>Diagnosis:</strong> {{ formData?.patientDiagonise }}</p>
+    <p><strong>Medication:</strong> {{ formData?.patientmedication }}</p>
+    <!-- Include other form inputs similarly -->
+  </div>
+</div>
+<router-outlet></router-outlet>

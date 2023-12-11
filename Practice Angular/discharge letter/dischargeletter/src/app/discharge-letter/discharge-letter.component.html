@@ -1,0 +1,63 @@
+<div class="discharge-letter">
+  <form [formGroup]="dischargeForm" (ngSubmit)="submitForm()">
+    <header>
+      <h1>Discharge Letter</h1>
+      <p>Date: {{ dischargeDate }}  <input type="text" id="date" name="date" required></p>
+    </header>
+    <main>
+      <section class="patient-details">
+        <h2>Patient Details</h2>
+        <p><strong>Name:</strong> {{ patientName }}
+        <input type="text" id="patientName" name="patientName"  required></p>
+        <p><strong>Age:</strong> {{ patientAge }}
+            <!-- <input type="number" id="Age" name="Age" [(ngModel)]="patientAge" required></p> -->
+        <!-- Add more patient details here -->
+      </section>
+  
+      <section class="diagnosis">
+        <h2>Diagnosis</h2>
+        <input type="text" id="details" name="details" required>
+        <p>{{ diagnosis }}</p>
+      </section>
+  
+      <section class="instructions">
+        <h2>Instructions</h2>
+        <ul>
+          <li>Medication: {{ medication }}<input type="text" id="medication" name="medication"  required> </li>
+          <li>Dietary instructions: {{ dietaryInstructions }}<input type="text" id="dietaryInstructions" name="dietaryInstructions" required></li>
+          <!-- Add more instructions here -->
+        </ul>
+      </section>
+  
+      <section class="doctor-info">
+        <h2>Doctor's Information</h2>
+        <p><strong>Name:</strong> {{ doctorName }} <input type="text" id="doctorName" name="doctorName"  required></p>
+        <p><strong>Contact:</strong> {{ doctorContact }} <input type="number" id="doctorContact" name="doctorContact"  required></p>
+        <!-- Add more doctor details here -->
+      </section>
+    </main>
+    <footer>
+      <p>Thank you for choosing our hospital. For any queries, contact us at{{ hospitalContact }} <input type="text" id="hospitalContact" name="doctorContact"  required></p>
+      <!-- <button value="Generate Discharge Letter" (onclick)="GenerateDischargeLetter()" >Generate Discharge Letter </button> -->
+      <input type="button" [disabled]="!dischargeForm.valid" value="GenerateDischargeLetter" name=" Generate Discharge Letter" (click)="GenerateDischargeLetter()"/>
+    </footer>
+    <div>
+      <label for="patientName">Patient Name:</label>
+      <input type="text" id="patientName" formControlName="patientName">
+      <div *ngIf="dischargeForm.get('patientName')?.invalid && dischargeForm.get('patientName')?.touched">
+        <small *ngIf="dischargeForm.get('patientName')?.errors">Patient Name is required.</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="patientAge">Patient Age:</label>
+      <input type="number" id="patientAge" formControlName="patientAge">
+      <div *ngIf="dischargeForm.get('patientAge')?.invalid && dischargeForm.get('patientAge')?.touched">
+        <small *ngIf="dischargeForm.get('patientAge')?.errors">Patient Age is required.</small>
+      </div>
+    </div>
+  
+    <button type="submit">Generate Discharge Letter</button>
+  </form>
+  </div>
+  
