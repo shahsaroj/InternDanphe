@@ -1,0 +1,39 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styles for the discharge letter */
+  .discharge-letter {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .patient-info,
+  .diagnosis-info,
+  .additional-info,
+  .footer {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  .footer {
+    text-align: right;
+  }
+  

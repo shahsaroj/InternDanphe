@@ -1,0 +1,49 @@
+Apply styles for the discharge letter
+.discharge-letter {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .discharge-letter h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .discharge-letter p {
+    margin-bottom: 10px;
+  }
+  
+  .discharge-letter button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Media query for print styles */
+  @media print {
+    body {
+      font-size: 12px; /* Adjust font size for print */
+    }
+  
+    .discharge-letter {
+      border: none; /* Remove border for printing */
+      box-shadow: none; /* Remove box-shadow for printing */
+      max-width: none; /* Allow full width for printing */
+      margin: 0; /* Reset margin for printing */
+      padding: 0; /* Reset padding for printing */
+    }
+  
+    .discharge-letter button {
+      display: none; /* Hide print button when printing */
+    }
+  }
+  

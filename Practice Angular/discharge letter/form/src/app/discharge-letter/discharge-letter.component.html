@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<router-outlet>
+    <div *ngIf="showDischargeLetter">
+        <h2>Discharge Letter</h2>
+        <!-- Your discharge letter content -->
+        <div class="discharge-content">
+          <p><strong>Patient Name:</strong> {{ patientName }}</p>
+          <p><strong>Patient Address:</strong> {{ patientAddress }}</p>
+          <p><strong>Patient Contact:</strong> {{ patientContact }}</p>
+          <p><strong>Diagnosis:</strong> {{ patientDiagonise }}</p>
+          <p><strong>Medication:</strong> {{ patientmedication }}</p>
+          <!-- Include other form inputs similarly -->
+        </div>
+      </div>
+</router-outlet>

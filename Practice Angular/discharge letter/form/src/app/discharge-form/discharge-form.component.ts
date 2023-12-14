@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-discharge-form',
   templateUrl: './discharge-form.component.html',
@@ -8,12 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DischargeFormComponent implements OnInit {
   dischargeForm!: FormGroup;
   showDischargeLetter: boolean = false;
-formData: any;
-patientName: any;
+  formData: any;
+  patientName:any ;
   router: any;
+  dischargeData: any;
   
 
-  constructor (private formBuilder: FormBuilder){
+  constructor (private formBuilder: FormBuilder, private route:Router){
     
   }
   ngOnInit() {
@@ -27,7 +29,6 @@ patientName: any;
      
     // Add other form controls with validators as needeD
   
-// Add other form controls with validators as needed
 });
 
   }
@@ -44,11 +45,19 @@ patientName: any;
     if (this.dischargeForm.valid) {
       // Process the form data here (e.g., generate discharge letter)
       this.showDischargeLetter = true;
-      this.router.navigate(['/discharge-letter'], { state: { formData: this.dischargeForm.value } });
+      this.router.navigate(['./dis'], { state: { formData: this.dischargeForm.value } });
     } else {
       // Mark all fields as touched to display validation errors
-      // Object.values(this.dischargeForm.controls).forEach(control => control.markAsTouched());
-    }
-  }
-}
+      Object.values(this.dischargeForm.controls).forEach(control => control.markAsUntouched());
 
+    // localStorage.setItem('formData', JSON.stringify(this.formData));
+    }
+    // // Navigate to another page
+    this.submitForm()
+     {
+      this.router.navigate(['/discharge-letter', this.dischargeForm]);
+    // this.router.navigate(['./discahrge-letter']);
+    // alert("SUBMITTE");
+    };
+  }
+  }

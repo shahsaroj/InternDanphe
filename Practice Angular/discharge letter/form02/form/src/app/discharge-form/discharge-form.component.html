@@ -1,0 +1,33 @@
+<form (ngSubmit)="generateDischargeLetter()">
+  <h1> Please fill this form fro discharge letter</h1>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.firstName" required>
+    <label for="firstName">Last Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.lastName" required>
+    <label for="firstName">Date of Birth:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.dateOfBirth" required>
+    <label for="firstName">Age:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.age" required>
+    <label for="firstName">Address:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.address" required>
+    <label for="firstName">Diagonised With:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.diagnosedWith" required>
+    <label for="firstName">Final Report:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.finalReport" required>
+    <label for="firstName">Doctor Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.doctorName" required>
+    <label for="firstName">Date of Diagonise:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.dateOfDiagnose" required>
+    <label for="firstName">Date of release:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.dateOfRelease" required>
+    <label for="firstName">Medication Provided:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.medicationProvided" required>
+    <label for="firstName">Dietary Information:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.dietaryInformation" required>
+
+    <!-- Other form fields for patient information -->
+  
+    <button type="button" (click)="onclick()">Generate Discharge Letter</button>
+  </form>
+  
+<router-outlet></router-outlet>

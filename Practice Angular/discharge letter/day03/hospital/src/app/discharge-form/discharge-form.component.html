@@ -1,0 +1,33 @@
+<h1>Discharge Form</h1>
+<form (ngSubmit)="displayDischargeLetter()">
+    <h1>Patient Information</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="dischargeData.name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" [(ngModel)]="dischargeData.age" required>
+
+    <label for="fatherName">father Name: </label>
+    <input type="text" id="fatherName" name="fatherName" [(ngModel)]="dischargeData.fatherName" required>
+
+    <label for="motherName">Mother Name:</label>
+    <input type="text" id="motherName" name="motherName" [(ngModel)]="dischargeData.motherName" required>
+
+    <h1>Daignosis</h1>
+
+    <label for="DaigoniseWith">Daigonise with: </label>
+    <input type="text" id="DaigoniseWith" name="DaigoniseWith" [(ngModel)]="dischargeData.DaigoniseWith" required>
+
+    <label for="medicationProvided">Medication Provided: </label>
+    <input type="text" id="medicationProvided" name="medicationProvided" [(ngModel)]="dischargeData.medicationProvided" required>
+
+    <label for="dietryInformation">Dietry Information:</label>
+    <input type="text" id="dietryInformation" name="dietryInformation" [(ngModel)]="dischargeData.dietryInformation" required>
+
+    <label for="additionalInformation">Addition Information:</label>
+    <input type="additionalInformation" id="additionalInformation" name="additionalInformation" [(ngModel)]="dischargeData.additionalInformation" required>
+    <br>
+    <button type="submit">Display Discharge Letter</button>
+  
+  </form>
+

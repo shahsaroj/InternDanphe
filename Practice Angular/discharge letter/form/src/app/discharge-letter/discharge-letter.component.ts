@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-discharge-letter',
@@ -8,13 +7,27 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DischargeLetterComponent implements OnInit {
   formData: any; // Define variable to store form data
+showDischargeLetter: any;
+  router: any;
+patientName: any;
+patientAddress: any;
+patientContact: any;
+patientDiagonise: any;
+patientmedication: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor() {}
 
   ngOnInit() {
-    this.formData = history.state.formData; // Get form data from state
+    // this.formData = history.state.formData; // Get form data from state
 
-    // Log the retrieved form data for verification
-    console.log('Form Data:', this.formData);
+    // // Log the retrieved form data for verification
+    // console.log('Form Data:', this.formData);
+
+    const storedData = localStorage.getItem('formData');
+    if (storedData) {
+      this.formData = JSON.parse(storedData);
+    this.router.navigate(['./discahrge-letter']);
+
+    }
   }
 }

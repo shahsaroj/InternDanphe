@@ -1,0 +1,22 @@
+<router-outlet>
+<div class="discharge-letter">
+    <h1>Discharge Letter</h1>
+    <p>First Name: {{ formData.firstName }}</p>
+    <p>Last Name: {{ formData.lastName }}</p>
+    <p>Date of Birth: {{ formData.dateOfBirth }}</p>
+    <p>Age: {{ formData.age }}</p>
+    <p>Address: {{ formData.address }}</p>
+    <p>Diaginised with: {{ formData.diagnosedWith }}</p>
+    <p>Final Report: {{ formData.finalReport }}</p>
+    <p>Doctor Name: {{ formData.doctorName }}</p>
+    <p>Date of Diagnose: {{ formData.dateOfDiagnose }}</p>
+    <p>Date of Release: {{ formData.dateOfRelease }}</p>
+    <p>Medication Provided: {{ formData.medicationProvided }}</p>
+    <p>Dietary Information: {{ formData.dietaryInformation }}</p>
+   
+    <!-- Display other patient details using form data -->
+  
+    <button (click)="print()">Print Discharge Letter</button>
+  </div>
+  
+</router-outlet>
