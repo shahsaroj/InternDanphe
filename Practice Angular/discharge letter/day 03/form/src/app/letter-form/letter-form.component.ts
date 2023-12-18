@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./letter-form.component.css']
 })
 export class LetterFormComponent implements OnInit {
-onSubmit() {
+onGenerate() {
 throw new Error('Method not implemented.');
 }
 // isFieldInvalid(arg0: string) {
@@ -24,7 +24,11 @@ throw new Error('Method not implemented.');
   //   console.log('Form Data:', this.formData);
   // }
   letterForm!: FormGroup;
-  formData: any = {};
+  formData: any = {
+    // name :'',
+    // address:'',
+
+  };
   constructor(private fb: FormBuilder) {
     this.createForm();
   }
@@ -44,19 +48,48 @@ throw new Error('Method not implemented.');
     return this.letterForm.controls;
     
   }
-  printButtonDisabled(...args: []): boolean {
+  // printButtonDisabled(): boolean {
+  //   return !this.letterForm.valid;
+  // }
+
+  onSubmit() {
+    if (this.letterForm.valid) {
+      this.formData = { ...this.letterForm.value };
+      // Your logic here to process the form data or save it
+      // console.log('Form Data:', this.formData?.value);
+    } else {
+      // Mark all fields as touched to display validation errors
+      this.letterForm?.markAllAsTouched();
+      // this.markFormTouched(this..va); 
+      
+    }
+    
+  }
+  markFormTouched() {
+    Object.values(this.letterForm?.controls).forEach(control => {
+      control.markAsTouched();
+    });
+  }
+  printButtonDisabled(): boolean {
     return !this.letterForm.valid;
   }
-
+  
+  
 
   printLetter() {
+   
     let printContents = `
-      <h1>Letter</h1>
-      <p><strong>Name:</strong> ${this.formData.name}</p>
-      <p><strong>Address:</strong> ${this.formData.address}</p>
-      <p><strong>Content:</strong></p>
-      <p>${this.formData.content}</p>
-    `;
+    <h1>Letter</h1>
+    <p><strong>Name:</strong> ${this.formData?.name.va}</p>
+    <p><strong>Address:</strong> ${this.formData?.address}</p>
+    <p><strong>Content:</strong></p>
+    <p>${this.formData?.content}</p>
+    <hr>
+    <h2>Form Inputs:</h2>
+    <p><strong>Name:</strong> ${this.letterForm.get('name')?.value}</p>
+    <p><strong>Email:</strong> ${this.letterForm.get('email')?.value}</p>
+    <!-- Add more form fields as needed -->
+  `;
 
     let popupWin = window.open('', '_blank', 'width=600,height=600');
     if (popupWin) {

@@ -1,0 +1,27 @@
+<form [formGroup]="hospitalForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Hospital Name:</label>
+      <input type="text" id="name" formControlName="name" required>
+      <!-- <div *ngIf="formControls?.['name'] ?.invalid" class="error-message">
+        Name is required.
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea id="address" formControlName="address" required></textarea>
+     
+    </div>
+    <!-- <div *ngIf="formControls?.['name'] ?.invalid" class="error-message">
+        Name is required.
+      </div> -->
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" formControlName="phoneNumber" required>
+    </div>
+    <!-- Add more form controls as needed -->
+  
+    <button type="submit">Submit</button>||
+    <button type="button" (click)="generateLetter()">Generate Letter</button>||
+    <button type="button" (click)="printFormData()">Print</button>
+  </form>
+  

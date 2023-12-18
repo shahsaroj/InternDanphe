@@ -3,23 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HospitalFormComponent } from './hospital-form/hospital-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-   
-  
-    
-   
+    HospitalFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-ReactiveFormsModule
-    // FormData
- 
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
