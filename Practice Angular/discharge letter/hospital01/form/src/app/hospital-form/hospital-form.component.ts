@@ -7,7 +7,34 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./hospital-form.component.css']
 })
 export class HospitalFormComponent implements OnInit {
+
+  public ReveresdData = { Name : "", Address :"", Phone : null}
+
+reverseFormData() {
+  if (this.hospitalForm.valid) {
+    const formData = { ...this.hospitalForm.value };
+    let revName = formData.name.split('').reverse().join('');
+    formData.name = revName;
+    console.log(formData.name);
+    formData.address = formData.address.split('').reverse().join('');
+    console.log(formData.address);
+    formData.phoneNumber =(formData.phoneNumber).split('').reverse().join('');
+    console.log(formData.phoneNumber);
+
+    this.ReveresdData.Name = formData.name
+    this.ReveresdData.Address = formData.address
+    this.ReveresdData.Phone = formData.phoneNumber
+    // this.hospitalForm.patchValue(formData);
+  } else {
+    
+  }
+
+}
+onclickreverse() {
+throw new Error('Method not implemented.');
+}
   hospitalForm: FormGroup;
+reversedData: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.hospitalForm = this.formBuilder.group({
@@ -26,10 +53,12 @@ export class HospitalFormComponent implements OnInit {
     if (this.hospitalForm.valid) {
       // Handle form submission logic here
       console.log(this.hospitalForm.value);
+      
       // You can send the form data to a service or perform other actions
     } else {
       // Handle form validation errors or display messages
     }
+    
   }
   generateLetter() {
     if (this.hospitalForm.valid) {
@@ -46,6 +75,8 @@ export class HospitalFormComponent implements OnInit {
     }
   }
 
+
+
   printFormData() {
     const formData = this.hospitalForm.value;
     let printContents = '<h1>Hospital Information</h1>';
@@ -53,6 +84,7 @@ export class HospitalFormComponent implements OnInit {
     Object.entries(formData).forEach(([key, value]) => {
       printContents += `<p><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</p>`;
     });
+    
 
     const popupWin = window.open('', '_blank', 'width=600,height=600');
     if (popupWin) {
@@ -75,4 +107,6 @@ export class HospitalFormComponent implements OnInit {
       alert('Popup blocked. Please allow popups for this website.');
     }
   }
+  
+ 
 }

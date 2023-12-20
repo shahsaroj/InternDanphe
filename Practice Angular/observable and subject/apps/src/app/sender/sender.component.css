@@ -1,0 +1,128 @@
+/* Sample styling - customize as needed */
+.chat-container {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+  
+  .messages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  } 
+  .message {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .input input {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .input button {
+    padding: 8px;
+  }
+
+
+   /* Sample styling - customize as needed */
+.chat-container {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: blue;
+}
+
+.messages {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.input input {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.input button {
+  padding: 8px;
+}
+
+/* Align sender component to the right */
+.chat-container {
+  align-self: flex-end;
+}
+/* Sample styling - customize as needed */
+.chat-container {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.messages {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.input input {
+  width: calc(100% - 80px);
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Align sender component to the right */
+.chat-container {
+  align-self: flex-end;
+}
+
+/* sender.component.css */
+/* Sample styling - customize as needed */
+
+.chat-container {
+  width: 60%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.own-message {
+  align-self: flex-end;
+  background-color: #3f51b5;
+  color: white;
+}

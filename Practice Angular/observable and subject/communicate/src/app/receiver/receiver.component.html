@@ -1,0 +1,13 @@
+
+<div class="right">
+  <h3>Receiver Component</h3>
+  <input type="text" [(ngModel)]="receivedMessage">
+  <button (click)="sendToSender()">Send Message to Sender</button>
+
+  <div *ngIf="arrayOfSentMessages && arrayOfSentMessages.length">
+    <p *ngFor="let msg of arrayOfSentMessages">
+        {{msg}}
+    </p>
+  </div>
+
+

@@ -1,0 +1,18 @@
+
+<div class="left">
+  <h3>Sender Component</h3>
+  <input type="text" [(ngModel)]="message">
+  <button (click)="sendMessage()">Send Message</button>
+</div>
+
+<div *ngIf="arrayOfSentMessages && arrayOfSentMessages.length">
+  <p *ngFor="let msg of arrayOfSentMessages">
+      {{msg}}
+  </p>
+</div>
+
+<!-- <div *ngIf="arrayOfMessages && arrayOfMessages.length">
+<p *ngFor="let msg of arrayOfMessages">
+ {{msg}}
+</p> -->
+

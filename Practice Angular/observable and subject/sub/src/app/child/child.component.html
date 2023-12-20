@@ -1,0 +1,7 @@
+<div class="child-container">
+    <h2>Receiver</h2>
+    <input type="text" [(ngModel)]="childInput" (input)=" sendToParent">
+    <button (click)="onclicksendToParent()">Send Data to sender</button>
+    <p>Received data from sender: {{[dataFromParent]}}</p>
+    <!-- <p>Data to Parent: {{ childToParentData }}</p> -->
+  </div>

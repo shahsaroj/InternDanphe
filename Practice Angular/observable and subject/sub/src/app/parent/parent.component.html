@@ -1,0 +1,12 @@
+<div class="parent-container">
+    <div class="left-side">
+      <h2>Sender</h2>
+      <input type="text" [(ngModel)]="parentInput" >
+    <button (click)="onclicksendTochild()">Send Data to receiver</button>
+
+      <p>Data from receiver: {{ [dataFromChild] }}</p>
+    </div>
+    <div class="right-side">
+      <app-child [childData]="parentData" (sendToParent)="receiveDataFromChild($event)"></app-child>
+    </div>
+

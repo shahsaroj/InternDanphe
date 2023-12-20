@@ -1,0 +1,66 @@
+
+/* .messenger {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+
+   /* Sample styling - customize as needed */
+
+/* .messenger {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Vertical divider */
+/* .divider {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+} */ 
+
+/* Sample styling - customize as needed */
+
+.messenger {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Vertical divider */
+.divider {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+
+/* Adjust left and right containers */
+.chat-container {
+  width: calc(50% - 10px); /* Subtract margin for each side */
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.left {
+  text-align: right;
+}
+
+.right {
+  text-align: left;
+}
+

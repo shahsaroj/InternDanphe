@@ -16,12 +16,21 @@
       </div> -->
     <div class="form-group">
       <label for="phoneNumber">Phone Number:</label>
-      <input type="tel" id="phoneNumber" formControlName="phoneNumber" required>
+      <input type="number" id="phoneNumber" formControlName="phoneNumber" required>
     </div>
     <!-- Add more form controls as needed -->
-  
     <button type="submit">Submit</button>||
     <button type="button" (click)="generateLetter()">Generate Letter</button>||
-    <button type="button" (click)="printFormData()">Print</button>
+    <button type="button" (click)="printFormData()">Print</button>||
+    <button type="button" (click)="reverseFormData()">Reverse Data</button>
   </form>
+
+  {{ReveresdData.Name}}
+  <br>
+  {{ReveresdData.Address}}
+  <br>
+  {{ReveresdData.Phone}}
+  <br>
+
+
   
